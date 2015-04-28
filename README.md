@@ -56,5 +56,4 @@ $Players->_if( $unit->enters($shop) )->then(
   
 4. Run your php server and visit your project file in a web browser (e.g. localhost/project.php) to compile.
 
-# Usage
 

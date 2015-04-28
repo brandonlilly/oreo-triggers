@@ -1,0 +1,186 @@
+<mint>
+	<player>Player 2</player>
+	<ownr>Computer</ownr> <!-- Player controller -->
+	
+	<era>Desert</era> <!-- Tileset -->
+	
+	<!-- Map dimensions added only for completeness; it does not affect dependent map aspects such as terrain. -->
+	<dim_x>128</dim_x> <!-- Map dimension x -->
+	<dim_y>128</dim_y> <!-- Map dimension y -->
+	
+	<player>Player 2</player>
+	<side>Protoss</side> <!-- Race -->
+	
+	<x>1</x>
+	<y>1</y>
+	<mtxm>16</mtxm> <!-- Terrain tile -->
+
+	<player>Player 2</player>
+	<unit_id>Terran Firebat</unit_id>
+	<puni_available>0</puni_available> <!-- Unit restriction -->
+	<puni_availabledefault>1</puni_availabledefault>
+	<puni_default>0</puni_default>
+	
+	<player>Player 2</player>
+	<upgrade>Zerg Carapace</upgrade>
+	<pupx_max>2</pupx_max> <!-- Upgrade restriction -->
+	<pupx_init>1</pupx_init>
+	<pupx_maxdefault>4</pupx_maxdefault>
+	<pupx_initdefault>3</pupx_initdefault>
+	<pupx_default>0</pupx_default>
+	
+	<player>Player 2</player>
+	<technology>[Tech] Irradiate</technology>
+	<ptex_available>0</ptex_available> <!-- Technology restriction -->
+	<ptex_researched>1</ptex_researched>
+	<ptex_availabledefault>0</ptex_availabledefault>
+	<ptex_researcheddefault>1</ptex_researcheddefault>
+	<ptex_default>0</ptex_default>
+	
+	<unit_id>Terran Firebat</unit_id>
+	<unix_default>0</unix_default> <!-- Unit/weapon setting -->
+	<unix_health>1</unix_health>
+	<unix_shield>2</unix_shield>
+	<unix_armor>3</unix_armor>
+	<unix_time>4</unix_time>
+	<unix_mineral>5</unix_mineral>
+	<unix_gas>6</unix_gas>
+	<unix_name>7</unix_name>
+	<weapon>Flame Thrower</weapon>
+	<unix_damage>8</unix_damage>
+	<unix_damagebonus>9</unix_damagebonus>
+	
+	<upgrade>Zerg Carapace</upgrade>
+	<upgx_default>0</upgx_default> <!-- Upgrade setting -->
+	<upgx_mineral>1</upgx_mineral>
+	<upgx_mineralfactor>2</upgx_mineralfactor>
+	<upgx_gas>3</upgx_gas>
+	<upgx_gasfactor>4</upgx_gasfactor>
+	<upgx_time>5</upgx_time>
+	<upgx_timefactor>6</upgx_timefactor>
+	
+	<technology>[Tech] Irradiate</technology>
+	<tecx_default>0</tecx_default> <!-- Technology setting -->
+	<tecx_mineral>1</tecx_mineral>
+	<tecx_gas>2</tecx_gas>
+	<tecx_time>3</tecx_time>
+	<tecx_energy>4</tecx_energy>
+	
+	<unit> <!-- Unit -->
+		<player>Player 2</player>
+		<unit_id>Terran Firebat</unit_id>
+		<x>42</x>
+		<y>24</y>
+		<health>50</health>
+		<shield>60</shield>
+		<energy>70</energy>
+		<resource>80</resource>
+		<hangar>8</hangar>
+		<cloaked/>
+		<burrowed/>
+		<intransit/>
+		<hallucinated/>
+		<invincible/>
+	</unit>
+	
+	<thg2> <!-- "Sprite" -->
+		<player>Player 2</player>
+		<thg2_id>100</thg2_id>
+		<x>42</x>
+		<y>24</y>
+		<thg2_disabled/>
+	</thg2>
+	
+	<player>Player 2</player>
+	<x>1</x>
+	<y>1</y>
+	<mask>0</mask> <!-- Fog of war -->
+	
+	<uprp> <!-- Unit property -->
+		<health>42</health>
+		<shield>24</shield>
+		<energy>11</energy>
+		<resource>22</resource>
+		<hangar>8</hangar>
+		<cloaked/>
+		<burrowed/>
+		<intransit/>
+		<hallucinated/>
+		<invincible/>
+	</uprp>
+	
+	<mrgn> <!-- Location -->
+		<x>42</x>
+		<y>24</y>
+		<xe>420</xe>
+		<ye>240</ye>
+		<mrgn_name>foo</mrgn_name>
+		<mrgn_low/>
+		<mrgn_medium/>
+		<mrgn_high/>
+		<mrgn_lowair/>
+		<mrgn_mediumair/>
+		<mrgn_highair/>
+	</mrgn>
+	
+	<sprp_name>foo</sprp_name> <!-- Scenario name -->
+	<sprp_desc>bar</sprp_desc> <!-- Scenario description -->
+	
+	<player>Player 2</player>
+	<forc_player>[Forc] Force 2</forc_player> <!-- Force (notice prefix for this section only) -->
+	<force>[Forc] Force 2</force>
+	<forc_name>\\fo\r\nob\x001ar</forc_name>
+	<forc_randomstartlocation/>
+	<forc_allies/>
+	<forc_alliedvictory/>
+	<forc_sharedvictory/>
+	
+	<wav_path>a.wav</wav_path> <!-- WAV -->
+	<wav_name>a</wav_name>
+	
+	<player>Player 2</player>
+	<colr>Teal</colr> <!-- Player color -->
+	
+	<trig_group>Player 2</trig_group>
+	<trig_group>Player 3</trig_group>
+	<trig/> <!-- Trigger (not a typo) -->
+	<trig_group>Player 2</trig_group>
+	<trig_group>Player 3</trig_group>
+	<trigp/> <!-- Trigger with preserve flag -->
+		<condition>
+			<cond_l>1</cond_l>
+			<cond_g>1</cond_g>
+			<cond_n>1</cond_n>
+			<cond_u>1</cond_u>
+			<cond_m>1</cond_m>
+			<cond_c>Deaths</cond_c>
+			<cond_r>1</cond_r>
+			<cond_f>1</cond_f>
+		</condition>
+		<action>
+			<act_l>1</act_l>
+			<act_s>1</act_s>
+			<act_w>1</act_w>
+			<act_t>1</act_t>
+			<act_gf>1</act_gf>
+			<act_gs>1</act_gs>
+			<act_u>1</act_u>
+			<act_c>Set Deaths</act_c>
+			<act_n>1</act_n>
+			<act_f>1</act_f>
+		</action>
+	<trig_group>Player 2</trig_group>
+	<mbrf/> <!-- Mission briefing trigger-->
+		<mbrf_action>
+			<act_l>1</act_l>
+			<act_s>1</act_s>
+			<act_w>1</act_w>
+			<act_t>1</act_t>
+			<act_gf>1</act_gf>
+			<act_gs>1</act_gs>
+			<act_u>1</act_u>
+			<act_c>Text Message</act_c>
+			<act_n>1</act_n>
+			<act_f>1</act_f>
+		</mbrf_action>
+</mint>

@@ -1,0 +1,1 @@
+g++ -O2 -Wall -I. -L. -lSFmpq -lscmc -lexpat mint.cpp -o mint.exe

@@ -1,5 +1,5 @@
 # Oreo Triggers
-Oreo Triggers provides a DSL for compiling Staredit triggers. It adds modularity, intuitive triggering, EUD, Switch and Deathcounter variable support, helps you manage your resources and allows for custom built actions and conditions.
+Oreo Triggers provides an API for compiling Staredit triggers. It adds modularity, intuitive triggering, EUD, Switch and Deathcounter variable support, helps you manage your resources and allows for custom built actions and conditions.
 
 # Examples
 Oreo gives the user variables (called Deathcounters) by allocating and handling the unit death table behind the scenes.

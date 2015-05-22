@@ -1,5 +1,5 @@
 # Oreo Triggers
-Oreo Triggers provides an API for compiling Staredit triggers. It adds modularity, intuitive triggering, EUD, Switch and Deathcounter variable support, helps you manage your resources and allows for custom built actions and conditions.
+Oreo Triggers provides a framework for compiling Staredit triggers. It adds modularity, intuitive triggering, EUD, Switch and Deathcounter variable support, helps you manage your resources and allows for custom built actions and conditions.
 
 # Examples
 Oreo gives the user variables (called Deathcounters) by allocating and handling the unit death table behind the scenes.
@@ -34,13 +34,13 @@ Allows for nested trigger logic
 ```php
 $Players->_if( $unit->enters($shop) )->then(
   Display("Welcome to my shop!"),
-  
+
   _if( $visited->is_clear() )->then(
     Display("There's a one time entrance fee."),
     $gold->subtract(5),
     $visited->set()
   ),  
-  
+
   Display("You're always free to look around!")
 );
 ```
@@ -49,11 +49,9 @@ $Players->_if( $unit->enters($shop) )->then(
 1. Install a local php server (e.g. MAMP)
 2. Clone or download the Oreo Triggers repository and place in your server's public facing folder (e.g. www, public)
 3. Create a php file for your Oreo project in the same directory and require the Oreos initialize file
-  ```php 
+  ```php
   <?php require_once('oreo-triggers/initialize.php');
   ```
-  This file (on the subsequent lines) is where you'll right your actual Oreo code. 
-  
+  This file (on the subsequent lines) is where you'll right your actual Oreo code.
+
 4. Run your php server and visit your project file in a web browser (e.g. localhost/project.php) to compile.
-
-

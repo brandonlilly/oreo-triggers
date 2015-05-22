@@ -85,7 +85,7 @@ class SwitchClass{
 		if (!$actions) { Error('You have to give your cases some actions', E_USER_ERROR ); }
 		
 		// Accumulate actions
-		$actions = AggrigateActions(func_get_args());
+		$actions = AggregateActions(func_get_args());
 		
 		return new SwitchClass(null,$this->Value,$actions);
 	}

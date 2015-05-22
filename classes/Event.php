@@ -62,7 +62,7 @@ class Event{
 			
 			// Accumulate conditions
 			$switchlist = new SwitchList();
-			$conditions = AggrigateConditions(func_get_args(), $switchlist);
+			$conditions = AggregateConditions(func_get_args(), $switchlist);
 			
 			// Create state handling triggers
 			$Player->_if( $conditions )->then(
@@ -87,7 +87,7 @@ class Event{
 			
 			// Accumulate conditions
 			$switchlist = new SwitchList();
-			$conditions = AggrigateConditions(func_get_args(), $switchlist);
+			$conditions = AggregateConditions(func_get_args(), $switchlist);
 			
 			global $PrependedEvents;
 			foreach($PrependedEvents as $event){

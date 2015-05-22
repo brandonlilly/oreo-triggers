@@ -28,7 +28,7 @@ class IfClass{
 	public function then($actions = null) {
 		
 		// Accumulate actions
-		$actions = AggrigateActions(func_get_args());
+		$actions = AggregateActions(func_get_args());
 		
 		$HEADING  = HEADING();
 		$ACTIONS  = ACTIONS();
@@ -119,7 +119,7 @@ class IfClass{
 	public function then_justonce($actions) {
 		
 		// Accumulate actions
-		$actions = AggrigateActions(func_get_args());
+		$actions = AggregateActions(func_get_args());
 		
 		$HEADING  = HEADING();
 		$ACTIONS  = ACTIONS();

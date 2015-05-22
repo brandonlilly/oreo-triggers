@@ -1,25 +1,25 @@
 <?php
 
-    // How long the compiler is allowed to take before it times out (in seconds)
-	set_time_limit(120);
-	
-	// This is the range of switches that Oreo Triggers is allowed to use at a whim. If you don't let it have any then OT is useless, basically.
-	switch_range(1, 255);
-	
-	// Oreo triggers will check for updates each time you compile.
-	check_for_updates(true);
-	
-	
-	// Every unit/player combination that is "true" is reserved for Deathcounters. If you set Terran Marine's P8 to "true" that means
-	// the system can expect that Player 8 will never suffer any deaths of Terran Marine and the system may potentially designated a
-	// Deathcounter with the P8/Marine combination. If you set a player slot to false, then the system will never create a deathcounter
-	// with that particular Player/Unit combination.
-	// 
-	// Units that can potentially die (depending on the map) are commented out. If you need more space allocated for deathcounters, you'll have to 
-	// uncomment some of them (thereby adding them to the array).
-	$DeathcounterUnits = array(
-    'Alan Turret' => 				array( P1 => true,  	P2 => true,  	P3 => true, 	P4 => true, 	P5 => true, 	P6 => true, 	P7 => true, 	P8 => true ),
-    'Start Location' => 			array( P1 => true,  	P2 => true,  	P3 => true, 	P4 => true, 	P5 => true, 	P6 => true, 	P7 => true, 	P8 => true ),
+// How long the compiler is allowed to take before it times out (in seconds)
+set_time_limit(120);
+
+// This is the range of switches that Oreo Triggers is allowed to use at a whim. If you don't let it have any then OT is useless, basically.
+switch_range(1, 255);
+
+// Oreo triggers will check for updates each time you compile.
+check_for_updates(true);
+
+
+// Every unit/player combination that is "true" is reserved for Deathcounters. If you set Terran Marine's P8 to "true" that means
+// the system can expect that Player 8 will never suffer any deaths of Terran Marine and the system may potentially designated a
+// Deathcounter with the P8/Marine combination. If you set a player slot to false, then the system will never create a deathcounter
+// with that particular Player/Unit combination.
+// 
+// Units that can potentially die (depending on the map) are commented out. If you need more space allocated for deathcounters, you'll have to 
+// uncomment some of them (thereby adding them to the array).
+$DeathcounterUnits = array(
+	'Alan Turret' => 				array( P1 => true,  	P2 => true,  	P3 => true, 	P4 => true, 	P5 => true, 	P6 => true, 	P7 => true, 	P8 => true ),
+	'Start Location' => 			array( P1 => true,  	P2 => true,  	P3 => true, 	P4 => true, 	P5 => true, 	P6 => true, 	P7 => true, 	P8 => true ),
 	'Goliath Turret' =>  			array( P1 => true,  	P2 => true,  	P3 => true, 	P4 => true, 	P5 => true, 	P6 => true, 	P7 => true, 	P8 => true ),
 	'Cantina' => 					array( P1 => true,  	P2 => true,  	P3 => true, 	P4 => true, 	P5 => true, 	P6 => true, 	P7 => true, 	P8 => true ),
 	'Cave' => 						array( P1 => true,  	P2 => true,  	P3 => true, 	P4 => true, 	P5 => true, 	P6 => true, 	P7 => true, 	P8 => true ),
@@ -41,10 +41,10 @@
 	'Zerg Marker' => 				array( P1 => true,  	P2 => true,  	P3 => true, 	P4 => true, 	P5 => true, 	P6 => true, 	P7 => true, 	P8 => true ),
 	'Unused type 2' => 				array( P1 => true,  	P2 => true,  	P3 => true, 	P4 => true, 	P5 => true, 	P6 => true, 	P7 => true, 	P8 => true ),
 	'Unused type 1' => 				array( P1 => true,  	P2 => true,  	P3 => true, 	P4 => true, 	P5 => true, 	P6 => true, 	P7 => true, 	P8 => true ),
-    'Duke Turret type 2' => 		array( P1 => true,  	P2 => true,  	P3 => true, 	P4 => true, 	P5 => true, 	P6 => true, 	P7 => true, 	P8 => true ),
-    'Duke Turret type 1' => 		array( P1 => true,  	P2 => true,  	P3 => true, 	P4 => true, 	P5 => true, 	P6 => true, 	P7 => true, 	P8 => true ),
-    'Tank Turret type 2' => 		array( P1 => true,  	P2 => true,  	P3 => true, 	P4 => true, 	P5 => true, 	P6 => true, 	P7 => true, 	P8 => true ),
-    'Tank Turret type 1' => 		array( P1 => true,  	P2 => true,  	P3 => true, 	P4 => true, 	P5 => true, 	P6 => true, 	P7 => true, 	P8 => true ),
+	'Duke Turret type 2' => 		array( P1 => true,  	P2 => true,  	P3 => true, 	P4 => true, 	P5 => true, 	P6 => true, 	P7 => true, 	P8 => true ),
+	'Duke Turret type 1' => 		array( P1 => true,  	P2 => true,  	P3 => true, 	P4 => true, 	P5 => true, 	P6 => true, 	P7 => true, 	P8 => true ),
+	'Tank Turret type 2' => 		array( P1 => true,  	P2 => true,  	P3 => true, 	P4 => true, 	P5 => true, 	P6 => true, 	P7 => true, 	P8 => true ),
+	'Tank Turret type 1' => 		array( P1 => true,  	P2 => true,  	P3 => true, 	P4 => true, 	P5 => true, 	P6 => true, 	P7 => true, 	P8 => true ),
 	"Scanner Sweep" => 				array( P1 => true,  	P2 => true,  	P3 => true, 	P4 => true, 	P5 => true, 	P6 => true, 	P7 => true, 	P8 => true ),
 	"Nuclear Missile" => 			array( P1 => true,  	P2 => true,  	P3 => true, 	P4 => true, 	P5 => true, 	P6 => true, 	P7 => true, 	P8 => true ), 
 	"Dark Swarm" => 				array( P1 => true,  	P2 => true,  	P3 => true, 	P4 => true, 	P5 => true, 	P6 => true, 	P7 => true, 	P8 => true ), 
@@ -74,7 +74,7 @@
 	"Terran Flag Beacon" => 		array( P1 => true,  	P2 => true,  	P3 => true, 	P4 => true, 	P5 => true, 	P6 => true, 	P7 => true, 	P8 => true ), 
 	"Protoss Flag Beacon" => 		array( P1 => true,  	P2 => true,  	P3 => true, 	P4 => true, 	P5 => true, 	P6 => true, 	P7 => true, 	P8 => true ), 
 	"Protoss Scarab" => 			array( P1 => true,  	P2 => true,  	P3 => true, 	P4 => true, 	P5 => true, 	P6 => true, 	P7 => true, 	P8 => true ), 
-	/**//**/
+	/**//**
 	"Ion Cannon" => 				array( P1 => true,  	P2 => true,  	P3 => true, 	P4 => true, 	P5 => true, 	P6 => true, 	P7 => true, 	P8 => true ), 
 	"Psi Disrupter" => 				array( P1 => true,  	P2 => true,  	P3 => true, 	P4 => true, 	P5 => true, 	P6 => true, 	P7 => true, 	P8 => true ), 
 	"Alan Schezar (Goliath)" => 	array( P1 => true,  	P2 => true,  	P3 => true, 	P4 => true, 	P5 => true, 	P6 => true, 	P7 => true, 	P8 => true ), 
@@ -249,7 +249,4 @@
 	"Zerg Ultralisk Cavern" => 		array( P1 => true,  	P2 => true,  	P3 => true, 	P4 => true, 	P5 => true, 	P6 => true, 	P7 => true, 	P8 => true ), 
 	"Zerg Zergling" => 				array( P1 => true,  	P2 => true,  	P3 => true, 	P4 => true, 	P5 => true, 	P6 => true, 	P7 => true, 	P8 => true ), 
 	/**/
-	);
-	
-	
-?>
+);

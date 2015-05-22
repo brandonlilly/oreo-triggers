@@ -5,7 +5,7 @@
 		
 		// Accumulate conditions
 		$switchlist = new SwitchList();
-		$conditions = AggrigateConditions(func_get_args(), $switchlist);
+		$conditions = AggregateConditions(func_get_args(), $switchlist);
 		
 		$nestswitch = new TempSwitch();
 		OrReplace($conditions, $switchlist, $nestswitch);
@@ -17,7 +17,7 @@
 		
 		// Accumulate conditions
 		$switchlist = new SwitchList();
-		$conditions = AggrigateConditions(func_get_args(), $switchlist);
+		$conditions = AggregateConditions(func_get_args(), $switchlist);
 		
 		OrReplace($conditions, $switchlist);
 		return new IfClass($conditions, $switchlist, null, true);
@@ -113,7 +113,7 @@
 		return substr_count($text, ENDT());
 	}
 	
-	function AggrigateConditions($array, SwitchList &$switchlist, $add_ORs = false){
+	function AggregateConditions($array, SwitchList &$switchlist, $add_ORs = false){
 		$conditiontext = '';
 		
 		foreach($array as $condition){
@@ -151,7 +151,7 @@
 		return $conditiontext;
 	}
 	
-	function AggrigateActions($array){
+	function AggregateActions($array){
 		$actiontext = '';
 		
 		foreach($array as $action){
@@ -335,7 +335,7 @@
 		
 		// Accumulate conditions and switchlist and add _ORs between
 		$switchlist = new SwitchList();
-		$conditions = AggrigateConditions(func_get_args(), $switchlist, true);
+		$conditions = AggregateConditions(func_get_args(), $switchlist, true);
 		
 		/** // old code
 		if ( $argnum > 0 ) {
@@ -404,7 +404,7 @@
 		}
 		
 		// Accumulate actions
-		$text = AggrigateActions(func_get_args());
+		$text = AggregateActions(func_get_args());
 		
 		// Insert entry into array
 		CullTriggers($text);
@@ -1112,7 +1112,7 @@
 		
 		// Accumulate conditions
 		$switchlist = new SwitchList();
-		$conditions = AggrigateConditions(func_get_args(), $switchlist);
+		$conditions = AggregateConditions(func_get_args(), $switchlist);
 		
 		return array($conditions, $switchlist);
 	}

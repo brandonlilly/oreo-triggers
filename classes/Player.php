@@ -75,7 +75,7 @@ class Player{
 		
 		// Accumulate conditions
 		$switchlist = new SwitchList();
-		$conditions = AggrigateConditions(func_get_args(), $switchlist);
+		$conditions = AggregateConditions(func_get_args(), $switchlist);
 		
 		// Analysis handling
 		global $AnalysisRoot;
@@ -123,7 +123,7 @@ class Player{
 		}
 		
 		// Accumulate actions
-		$actions = AggrigateActions(func_get_args());
+		$actions = AggregateActions(func_get_args());
 		
 		$text = 	HEADING().Always().ACTIONS().PreserveTrigger().$actions.ENDT();
 		OutputTriggers($text, null, $this->PrependState);
@@ -152,7 +152,7 @@ class Player{
 		}
 		
 		// Accumulate actions
-		$actions = AggrigateActions(func_get_args());
+		$actions = AggregateActions(func_get_args());
 		
 		$text = 	HEADING().Always().ACTIONS().$actions.ENDT();
 		OutputTriggers($text, null, $this->PrependState);
@@ -181,7 +181,7 @@ class Player{
 		}
 		
 		// Accumulate actions
-		$actions = AggrigateActions(func_get_args());
+		$actions = AggregateActions(func_get_args());
 		
 		$text = 	HEADING().Never().ACTIONS().$actions.ENDT();
 		OutputTriggers($text, null, $this->PrependState);

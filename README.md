@@ -1,12 +1,10 @@
 # Oreo Triggers
 Oreo Triggers provides a framework for compiling Staredit triggers. It adds modularity, intuitive triggering, EUD, Switch and Deathcounter variable support, helps you manage your resources and allows for custom built actions and conditions.
 
-> [9/28/15, 4:30:50 PM] Samson Bradley: uuugggh  
-> [9/28/15, 4:30:58 PM] Samson Bradley: Oreo actually turns me on  
-> [9/28/15, 4:31:15 PM] Samson Bradley: most efficient way to make a map ever  
-> [9/28/15, 4:30:50 PM] Samson Bradley: uuugggh  
-> [9/28/15, 4:30:58 PM] Samson Bradley: Oreo actually turns me on  
-> [9/28/15, 4:31:15 PM] Samson Bradley: most efficient way to make a map ever  
+> uuugggh  
+> Oreo actually turns me on  
+> most efficient way to make a map ever  
+> -samsizzle
 
 # Examples
 Oreo gives the user variables (called Deathcounters) by allocating and handling the unit death table behind the scenes.

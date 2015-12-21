@@ -1,7 +1,7 @@
 <?php
-	
+
 	// STANDARD
-	function Accumulate($player, $qmod, $n, $resourcetype) 	{ 
+	function Accumulate($player, $qmod, $n, $resourcetype) 	{
 		if( is_string($player) ){
 			if( Minted() ){
 				return XMLCondition(array(
@@ -26,14 +26,14 @@
 			return orGroup($text);
 		}
 	}
-	function Always() 										{ 
+	function Always() 										{
 		if( Minted() ){
 			return '';
 		}
 		return TAB.'Always();'.NL;
 	}
-	function Bring($player, $unit, $qmod, $n, $location)	{ 
-		if( is_string($player) ){ 
+	function Bring($player, $unit, $qmod, $n, $location)	{
+		if( is_string($player) ){
 			GetLocName($location);
 			GetUnitType($unit);
 			if( Minted() ){
@@ -128,7 +128,17 @@
 		}
 		return TAB."Commands the Most At(\"$unit\", \"$location\");".NL;
 	}
-	function Deaths($player, $qmod, $n, $unit) 				{ 
+	function CountdownTimer($qmod, $seconds) {
+	  if( Minted() ){
+	    return XMLCondition(array(
+	      'c' => 'Countdown Timer',
+	      'm' => $qmod,
+	      'n' => $seconds,
+	    ));
+	  }
+	  return TAB."Countdown Timer($qmod, $seconds);".NL;
+	}
+	function Deaths($player, $qmod, $n, $unit) 				{
 		if( is_string($player) ){
 			GetUnitType($unit);
 			if( Minted() ){
@@ -327,7 +337,7 @@
 		$nl = NL;
 		return TAB."Switch(\"$nameOrID\", not set);$nl";
 	}
-	function Score($player, $scoretype, $qmod, $n)			{ 
+	function Score($player, $scoretype, $qmod, $n)			{
 		if( is_string($player) ){
 			if( Minted() ){
 				return XMLCondition(array(
@@ -352,19 +362,19 @@
 			return orGroup($text);
 		}
 	}
-	
-	
-	
+
+
+
 	// CUSTOM
 	function Ore($player, $qmod, $n){ return Accumulate($player, $qmod, $n, Ore); }
 	function Gas($player, $qmod, $n){ return Accumulate($player, $qmod, $n, Gas); }
-	
+
 	function ElapsedTime($qmod, $seconds)					{ return Elapsed($qmod, $seconds); }
-	
+
 	function AtLeast($dc, $n) 	{ return Deaths($dc->Player, AtLeast, $n, $dc->Unit); }
 	function AtMost($dc, $n) 	{ return Deaths($dc->Player, AtMost, $n, $dc->Unit); }
 	function Exactly($dc, $n) 	{ return Deaths($dc->Player, Exactly, $n, $dc->Unit); }
-	
+
 	function LessThan(Deathcounter $dc1, Deathcounter $dc2) {
 		$switch1 = new TempSwitch();
 		$switch2 = new TempSwitch();
@@ -532,8 +542,8 @@
 	function Equal($dc1,$dc2){
 		return Within($dc1,$dc2,0);
 	}
-	
-	
+
+
 	function ForemostPlayer(){
 		global $ForemostSwitch;
 		if( !$ForemostSwitch ){
@@ -541,9 +551,7 @@
 		}
 		return $ForemostSwitch->is_clear();
 	}
-	
+
 	// EPDS
 	function ChatIsOpen() 		{ return Memory(264056, AtLeast, 1); } // Local
 	function ChatIsClosed() 	{ return Memory(264056, Exactly, 0); } // Local
-
-	

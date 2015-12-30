@@ -307,7 +307,7 @@
 		return TAB.'Leader Board Points("'.$label.'", '.$scoretype.');'.NL;
 	}
 	function LeaderBoardComputers($state)		{
-			if( Minted() ){
+		if( Minted() ){
 			GetMintStateConversion($state);
 			return XMLAction(array(
 				'c' => 'Leaderboard Computer Players',
@@ -882,8 +882,8 @@
 	function SetDoodadState($player, $unit, $location, $state) { 
 		if( is_string($player) ) {
 			GetLocName($location); GetUnitType($unit);
-			GetMintStateConversion($state);
 			if( Minted() ){
+				GetMintStateConversion($state);
 				return XMLAction(array(
 					'c' => 'Set Doodad State',
 					'gf' => $player,
@@ -930,8 +930,8 @@
 	function SetInvincibility($player, $unit, $location, $state) { 
 		if( is_string($player) ) {
 			GetLocName($location); GetUnitType($unit);
-			GetMintStateConversion($state);
 			if( Minted() ){
+				GetMintStateConversion($state);
 				return XMLAction(array(
 					'c' => 'Set Invincibility',
 					'gf' => $player,
